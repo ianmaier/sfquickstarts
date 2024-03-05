@@ -134,8 +134,8 @@ your data using either a SQL editor, table selector, or your existing dbt models
 SELECT 
   * 
 FROM 
-  public.customers c 
-  JOIN public.events e ON c.customer_id = e.customer_id
+  public.events e
+  JOIN public.customers c ON e.customer_id = c.customer_id
 ```
 
 *Note: each row should be a unique event with a unique event ID and timestamp (within the last 7 days). You can additionally include any of the server event parameters or custom data parameters below. The more customer information you're able to provide, the higher the likelihood that Facebook will match events to the correct user profiles.*
@@ -145,7 +145,7 @@ FROM
 
 ![Preview model](assets/create-model-step-5.png)
 
-6. Then name your model, select your primary key, and click **Finish**.
+6. Name your model, select your primary key, and click **Finish**.
 
 ![Name model](assets/create-model-step-6.png)
 
@@ -200,4 +200,9 @@ By implementing Facebook Conversions API (CAPI) with Snowflake and Hightouch, yo
   Conversion API](https://hightouch.com/playbooks/send-better-signals-with-facebook-conversion-api)
 - [Hightouch Blog: The Power of Conversion
   APIs](https://hightouch.com/blog/the-power-of-conversion-apis)
+- [Hightouch Webinar: The New Age of Digital Advertising | The Power of Conversion APIs
+  APIs](https://hightouch.com/events/snowflake-capi-webinar)
+- [Hightouch Blog: Synthetic Conversions
+  APIs](https://hightouch.com/blog/synthetic-conversions)
+
   
